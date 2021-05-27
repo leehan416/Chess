@@ -17,6 +17,7 @@ public class UI {
 	public int r = 70;
 
 	public void BoardPrint() {
+		frame.setVisible(true);
 		for (int h = 0; h < 8; h++) {
 			for (int w = 0; w < 8; w++) {
 				UI.frame.getGraphics().drawRect(20 + (w * r), 40 + (h * r), r, r);
@@ -24,6 +25,7 @@ public class UI {
 					UI.frame.getGraphics().fillRect(20 + (w * r), 40 + (h * r), r, r);
 			}
 		}
+		
 	}
 	
 	

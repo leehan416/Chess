@@ -6,19 +6,19 @@ public class Pieces {
 	int pType;
 
 	public Pieces(int type) { // 1 = Pawn 2 = Knight 3 = Bishop 4 = Rook 5 = Queen 6 = King
-		pType = type;	
+		pType = type;
 	}
-	
-	
-	public static void Move () {		
+
+	public void Move(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public void Kill(int x, int y) {
 		
 	}
-	
-	public static void Kill () {
-		
-	}
-	
-	public static void Clicked (int x, int y) {
-		
+
+	public void Clicked(int x, int y) {
+
 	}
 }
