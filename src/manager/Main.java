@@ -4,13 +4,13 @@ public class Main {
 
 	public static UI ui;
 
-	public void main(String[] args) {
+	public static void main(String[] args) {
 		setup();
 		ui = new UI();
 		ui.BoardPrint();
 	}
 
-	void setup() {
+	static void setup() {
 		boolean en = false;
 		for (int y = 0; y < 8; y++) {
 			for (int x = 0; x < 8; x++) {

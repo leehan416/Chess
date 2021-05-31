@@ -12,21 +12,23 @@ public class UI {
 		frame.setResizable(false); // 사이즈 재조정 불가능
 		frame.setLocationRelativeTo(null); // 창이 가운데에 뜨도록 함
 	}
-	
-	
+
 	public int r = 70;
 
 	public void BoardPrint() {
 		frame.setVisible(true);
 		for (int h = 0; h < 8; h++) {
 			for (int w = 0; w < 8; w++) {
-				UI.frame.getGraphics().drawRect(20 + (w * r), 40 + (h * r), r, r);
-				if (((h + w) % 2) == 1)
-					UI.frame.getGraphics().fillRect(20 + (w * r), 40 + (h * r), r, r);
+				if (DataBase.map[w][h].pType > 0) {
+					UI.frame.getGraphics().drawRect(20 + (w * r), 40 + (h * r), r, r);
+					if (((h + w) % 2) == 1)
+						UI.frame.getGraphics().fillRect(20 + (w * r), 40 + (h * r), r, r);
+				}
+				
+				
 			}
 		}
-		
+
 	}
-	
-	
+
 }

@@ -3,7 +3,7 @@ package manager;
 public class Pieces {
 	int x = 0;
 	int y = 0;
-	int pType;
+	public int pType;
 	boolean en;// false =mine true = enermy
 
 	public Pieces(int type, int x, int y, boolean en) { 
