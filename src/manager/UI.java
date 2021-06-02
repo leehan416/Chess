@@ -19,16 +19,11 @@ public class UI {
 		frame.setVisible(true);
 		for (int h = 0; h < 8; h++) {
 			for (int w = 0; w < 8; w++) {
-				if (DataBase.map[w][h].pType > 0) {
-					UI.frame.getGraphics().drawRect(20 + (w * r), 40 + (h * r), r, r);
-					if (((h + w) % 2) == 1)
-						UI.frame.getGraphics().fillRect(20 + (w * r), 40 + (h * r), r, r);
-				}
-				
-				
+
+				UI.frame.getGraphics().drawRect(20 + (w * r), 40 + (h * r), r, r);
+				if (((h + w) % 2) == 1)
+					UI.frame.getGraphics().fillRect(20 + (w * r), 40 + (h * r), r, r);
 			}
 		}
-
 	}
-
 }
