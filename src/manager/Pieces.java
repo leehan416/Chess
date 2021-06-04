@@ -13,8 +13,9 @@ public class Pieces {
 		this.y = y;
 		this.en = en;
 	}
-	public Pieces (int a) {
-		
+
+	public Pieces(int a) {
+
 	}
 
 	public void Move(int x, int y) {
@@ -34,34 +35,70 @@ public class Pieces {
 
 	public void Clicked() {
 		switch (pType) {
-			case 1: {
-				for (int i = 0; i < 3; i++) {
-					try {
-						if (i != 1) {
-							if (DataBase.map[x + i][y + 1].en) // 적 존재
-								DataBase.moveMap[x + i][y + 1] = true;
-						} else if (DataBase.map[x + i][y + 1].pType == 0)
-								DataBase.moveMap[x + i][y + 1] = true;
-					} catch (Exception E) { }
+		case 1: {
+			for (int i = 0; i < 3; i++) {
+				try {
+					if (i != 1) {
+						if (DataBase.map[x + i][y + 1].en) // 적 존재
+							DataBase.moveMap[x + i][y + 1] = true;
+					} else if (DataBase.map[x + i][y + 1].pType == 0)
+						DataBase.moveMap[x + i][y + 1] = true;
+				} catch (Exception E) {
 				}
-				break;
-			} case 2: {
-				for (int x = 0 ;x < 3; x++ ) {
-					
+			}
+			break;
+		}
+		case 2: {
+			while (true) {
+				try {
+					if (DataBase.map[x - 2][y + 1].pType >= 0) {
+						DataBase.moveMap[x - 2][y + 1] = true;
+						break;
+					} else if (DataBase.map[x - 2][y - 1].pType >= 0) {
+						DataBase.moveMap[x - 2][y - 1] = true;
+						break;
+					} else if (DataBase.map[x + 1][y + 2].pType >= 0) {
+						DataBase.moveMap[x + 1][y + 2] = true;
+						break;
+					} else if (DataBase.map[x - 1][y + 2].pType >= 0) {
+						DataBase.moveMap[x - 1][y + 2] = true;
+						break;
+					} else if (DataBase.map[x + 2][y + 1].pType >= 0) {
+						DataBase.moveMap[x + 2][y + 1] = true;
+						break;
+					} else if (DataBase.map[x + 2][y - 1].pType >= 0) {
+						DataBase.moveMap[x + 2][y - 1] = true;
+						break;
+					} else if (DataBase.map[x + 1][y + 2].pType >= 0) {
+						DataBase.moveMap[x + 1][y + 2] = true;
+						break;
+					} else if (DataBase.map[x - 1][y + 2].pType >= 0) {
+						DataBase.moveMap[x - 1][y + 2] = true;
+						break;
+					}
+				} catch (Exception E) {
+
 				}
-				
-				
-				
-				break;
-			} case 3: {
-				break;
-			} case 4: {
-				break;
-			} case 5: {
-				break;
-			} case 6: {
+			}
+			return;
+		}
+		case 3: {
+
+			while (true) {
+				//if ()
 				break;
 			}
+			break;
+		}
+		case 4: {
+			break;
+		}
+		case 5: {
+			break;
+		}
+		case 6: {
+			break;
+		}
 		}
 	}
 }
