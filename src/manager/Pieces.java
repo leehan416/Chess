@@ -13,6 +13,9 @@ public class Pieces {
 		this.y = y;
 		this.en = en;
 	}
+	public Pieces (int a) {
+		
+	}
 
 	public void Move(int x, int y) {
 		DataBase.map[this.x][this.y] = new Pieces(0, x, y, false);
@@ -43,6 +46,12 @@ public class Pieces {
 				}
 				break;
 			} case 2: {
+				for (int x = 0 ;x < 3; x++ ) {
+					
+				}
+				
+				
+				
 				break;
 			} case 3: {
 				break;
