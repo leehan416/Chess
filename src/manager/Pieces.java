@@ -84,8 +84,16 @@ public class Pieces {
 		}
 		case 3: {
 
+			int moveX = x;
+			int moveY = y;
 			while (true) {
-				//if ()
+
+				try {
+					
+				} catch (Exception e) {
+					
+				}
+				// if ()
 				break;
 			}
 			break;
