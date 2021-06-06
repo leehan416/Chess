@@ -77,7 +77,6 @@ public class Pieces {
 						break;
 					}
 				} catch (Exception E) {
-
 				}
 			}
 			return;
@@ -87,18 +86,80 @@ public class Pieces {
 			int moveX = x;
 			int moveY = y;
 			while (true) {
-
 				try {
-					
+					moveX++;
+					moveY++;
+					if (DataBase.map[moveX][moveY].pType > 0) {
+						break;
+					}
+					DataBase.moveMap[moveX][moveY] = true;
+
 				} catch (Exception e) {
-					
+					break;
 				}
-				// if ()
+				// ----------------------------------------------
+				moveX = x;
+				moveY = y;
+				while (true) {
+					try {
+						moveX--;
+						moveY--;
+						if (DataBase.map[moveX][moveY].pType > 0) {
+							break;
+						}
+						DataBase.moveMap[moveX][moveY] = true;
+					} catch (Exception e) {
+						break;
+					}
+				}
+				// ----------------------------------------------
+				moveX = x;
+				moveY = y;
+				while (true) {
+					try {
+						moveX++;
+						moveY--;
+						if (DataBase.map[moveX][moveY].pType > 0) {
+							break;
+						}
+						DataBase.moveMap[moveX][moveY] = true;
+					} catch (Exception e) {
+						break;
+					}
+				}
+				// ----------------------------------------------
+				moveX = x;
+				moveY = y;
+				while (true) {
+					try {
+						moveX--;
+						moveY++;
+						if (DataBase.map[moveX][moveY].pType > 0) {
+							break;
+						}
+						DataBase.moveMap[moveX][moveY] = true;
+					} catch (Exception e) {
+						break;
+					}
+				}
 				break;
 			}
 			break;
 		}
 		case 4: {
+			int moveX = x;
+			int moveY = y;
+			while (true) {
+				moveX++;
+				try {
+					DataBase.moveMap[moveX][moveY] = true;
+				} catch (Exception E) {
+					break;
+				}
+			}
+
+			moveY--;
+
 			break;
 		}
 		case 5: {
